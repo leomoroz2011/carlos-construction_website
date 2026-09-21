@@ -338,8 +338,11 @@ function Contact() {
             </p>
           </div>
         ) : (
-          /* TODO: Formspree endpoint below is a placeholder. Swap for a real
-             Formspree form ID pointed at Carlos's confirmed email before use. */
+          /* TODO: Formspree endpoint below is a placeholder (no real Formspree
+             account exists in this environment). Create a real Formspree form,
+             point it at leomoroz09@gmail.com only as a temporary placeholder,
+             then swap to Carlos's real email once confirmed, before this site
+             is used to collect real leads. */
           <form
             action="https://formspree.io/f/PLACEHOLDER"
             method="POST"
