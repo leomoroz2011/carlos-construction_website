@@ -134,14 +134,15 @@ function Hero() {
       </div>
       <div className="relative z-10 max-w-3xl mx-auto animate-hero">
         <span className="inline-block bg-white/10 border border-white/20 text-white/90 text-xs font-semibold tracking-wide uppercase px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
-          Serving San Francisco &amp; San Mateo County
+          Serving Daly City, South San Francisco, Millbrae &amp; Pacifica
         </span>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.05] tracking-tight mb-6">
           Home Remodeling and Handyman Work in Daly City and South San Francisco
         </h1>
         <p className="text-white/80 text-lg md:text-xl mb-9 max-w-2xl mx-auto leading-relaxed">
-          One crew, run by Carlos, 15+ years remodeling homes on the Peninsula. Free
-          estimates, no subcontracted labor passed off as ours.
+          One crew, run by Carlos, 15+ years remodeling homes across Daly City,
+          South San Francisco, Millbrae, and Pacifica. Free estimates, no
+          subcontracted labor passed off as ours.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -234,7 +235,7 @@ function Features() {
     },
     {
       title: '15+ Years on the Peninsula',
-      desc: 'From Daly City to Redwood City, Carlos has been remodeling homes in San Francisco and San Mateo County for over 15 years.',
+      desc: 'Across Daly City, South San Francisco, Millbrae, and Pacifica, Carlos has been remodeling homes for over 15 years.',
       Visual: RouteVisual,
     },
   ]
@@ -327,7 +328,7 @@ function ServicesGrid() {
       <div className="max-w-6xl mx-auto">
         <div ref={ref} className="reveal text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">
-            What Carlos Handles Around Daly City and South San Francisco
+            What Carlos Handles Around Millbrae and Pacifica
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 rounded-2xl overflow-hidden">
@@ -353,7 +354,7 @@ function TrustSignals() {
   const ref = useReveal()
   const badges = [
     { icon: Star, label: '5.0★ Rated on Yelp (38 Reviews)' },
-    { icon: Hammer, label: '15+ Years in SF & San Mateo County' },
+    { icon: Hammer, label: '15+ Years on the Peninsula' },
     { icon: CheckCircle2, label: 'Free, In-Person Estimates' },
   ]
   return (

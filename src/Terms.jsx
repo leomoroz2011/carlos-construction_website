@@ -17,8 +17,8 @@ export default function Terms() {
             <p>
               This website belongs to Carlos Construction, operated by Construction Special In
               Details, Inc. The site describes remodeling, repair, and handyman services offered
-              in the San Francisco and San Mateo County area. Actual work is scoped and agreed to
-              separately with each customer, in person or by phone, before any job begins.
+              in Daly City, South San Francisco, Millbrae, and Pacifica. Actual work is scoped and
+              agreed to separately with each customer, in person or by phone, before any job begins.
             </p>
           </section>
 
