@@ -257,6 +257,45 @@ function Features() {
   )
 }
 
+const WORK_PHOTOS = [
+  { src: '/work/door-hardware-install.png', alt: 'Carlos installing a new door lockset and hardware' },
+  { src: '/work/fireplace-remodel-progress.png', alt: 'Fireplace and built-in remodel with the wall opened up for wiring' },
+  { src: '/work/living-room-finished.png', alt: 'Finished living room remodel with a new fireplace surround' },
+  { src: '/work/exterior-door-install.png', alt: 'New exterior side door installed on a home' },
+  { src: '/work/sunroom-exterior.png', alt: 'Finished sunroom addition with new windows' },
+  { src: '/work/wood-lattice-fence.png', alt: 'New wood lattice fence panel' },
+  { src: '/work/rust-damage-repair.png', alt: 'Rusted roof flashing before repair' },
+  { src: '/work/living-room-finished-2.png', alt: 'Finished living room remodel, wide view' },
+]
+
+function RecentWork() {
+  const ref = useReveal()
+  return (
+    <section className="py-24 px-5 bg-white">
+      <div className="max-w-6xl mx-auto">
+        <div ref={ref} className="reveal text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-ink tracking-tight mb-3">
+            A Few Recent Jobs Around the Peninsula
+          </h2>
+          <p className="text-neutral-500 text-lg">Real photos from real jobs, not stock shots.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {WORK_PHOTOS.map((p) => (
+            <div key={p.src} className="aspect-square rounded-xl overflow-hidden bg-neutral-100">
+              <img
+                src={p.src}
+                alt={p.alt}
+                loading="lazy"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function Pillars() {
   const [yearsRef, years] = useCountUp(15)
   const [ratingRef, rating] = useCountUp(5, { decimals: 1 })
@@ -703,6 +742,7 @@ export default function App() {
       <StickyMobileCTA />
       <Hero />
       <Features />
+      <RecentWork />
       <Pillars />
       <Protocol />
       <ServicesGrid />
