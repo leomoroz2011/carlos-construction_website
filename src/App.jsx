@@ -13,6 +13,7 @@ import {
   MapPinned,
   ChevronLeft,
   ChevronRight,
+  X,
 } from 'lucide-react'
 import { Navbar, Footer, StickyMobileCTA, PHONE, PHONE_HREF } from './Chrome.jsx'
 
@@ -146,7 +147,7 @@ function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="#contact"
+            href="#contact-form"
             className="bg-accent hover:bg-accent/90 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-105"
           >
             Get a Free Estimate
@@ -285,7 +286,7 @@ function Protocol() {
     {
       n: '01',
       title: 'Call or Send Your Project',
-      desc: 'Reach Carlos directly by phone or through the form below. He calls back personally, usually the same day.',
+      desc: 'Reach Carlos directly by phone or through the free estimate form. He calls back personally, usually the same day.',
     },
     {
       n: '02',
@@ -480,16 +481,47 @@ function Contact() {
           <h2 className="text-3xl md:text-4xl font-extrabold text-ink tracking-tight mb-3">
             Get Your Free Estimate in Daly City and South San Francisco
           </h2>
-          <p className="text-neutral-500 text-lg">Tell us about the job and Carlos will get back to you directly.</p>
+          <p className="text-neutral-500 text-lg mb-8">Tell us about the job and Carlos will get back to you directly.</p>
+          <a
+            href="#contact-form"
+            className="inline-flex items-center gap-2 bg-accent hover:bg-accent/90 text-white font-semibold px-7 py-3.5 rounded-full transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-105"
+          >
+            Start Your Free Estimate
+          </a>
         </div>
 
-        {submitted ? (
-          <div className="bg-neutral-50 border border-neutral-200 rounded-2xl p-10 text-center">
-            <CheckCircle2 size={40} className="text-accent mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-ink mb-2">Thanks, we'll be in touch shortly</h3>
-            <p className="text-neutral-500">Carlos will {form.preferred === 'Email' ? 'email' : 'call or text'} you back to schedule your free estimate.</p>
-          </div>
-        ) : (
+        <div className="rounded-2xl overflow-hidden border border-neutral-200">
+          <iframe
+            title="Carlos Construction location, 240 Lake Merced Blvd, Daly City, CA"
+            src="https://www.google.com/maps?q=240+Lake+Merced+Blvd,+Daly+City,+CA+94015&output=embed"
+            className="w-full h-64 border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+
+      <div
+        id="contact-form"
+        className="hidden target:flex fixed inset-0 z-[100] items-center justify-center p-4 sm:p-6 bg-ink/70 backdrop-blur-sm overflow-y-auto"
+      >
+        <div className="relative w-full max-w-lg bg-white rounded-2xl p-6 sm:p-8 my-auto">
+          <a
+            href="#"
+            aria-label="Close form"
+            onClick={() => { setStep(0); setError(''); setSubmitted(false) }}
+            className="absolute top-5 right-5 h-9 w-9 rounded-full bg-neutral-100 border border-neutral-200 flex items-center justify-center hover:border-accent/50 transition-colors duration-300"
+          >
+            <X size={16} className="text-ink" />
+          </a>
+
+          {submitted ? (
+            <div className="text-center py-6">
+              <CheckCircle2 size={40} className="text-accent mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-ink mb-2">Thanks, we'll be in touch shortly</h3>
+              <p className="text-neutral-500">Carlos will {form.preferred === 'Email' ? 'email' : 'call or text'} you back to schedule your free estimate.</p>
+            </div>
+          ) : (
           /* TODO: Formspree requires an account to generate a real endpoint,
              no API key is available in this environment. Sign in at
              formspree.io, create a new form with recipient
@@ -499,7 +531,7 @@ function Contact() {
             action="https://formspree.io/f/PLACEHOLDER"
             method="POST"
             onSubmit={handleSubmit}
-            className="bg-neutral-50 border border-neutral-200 rounded-2xl p-6 sm:p-8"
+            className="pr-8"
           >
             <input type="hidden" name="_subject" value="New website inquiry - Carlos Construction" />
             <input type="hidden" name="preferred_contact" value={form.preferred} />
@@ -657,16 +689,7 @@ function Contact() {
               )}
             </div>
           </form>
-        )}
-
-        <div className="mt-10 rounded-2xl overflow-hidden border border-neutral-200">
-          <iframe
-            title="Carlos Construction location, 240 Lake Merced Blvd, Daly City, CA"
-            src="https://www.google.com/maps?q=240+Lake+Merced+Blvd,+Daly+City,+CA+94015&output=embed"
-            className="w-full h-64 border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          )}
         </div>
       </div>
     </section>

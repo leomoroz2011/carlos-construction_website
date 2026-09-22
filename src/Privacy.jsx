@@ -1,9 +1,10 @@
-import { Navbar, Footer } from './Chrome.jsx'
+import { Navbar, Footer, StickyMobileCTA } from './Chrome.jsx'
 
 export default function Privacy() {
   return (
     <div className="bg-white">
       <Navbar />
+      <StickyMobileCTA />
       <main className="max-w-3xl mx-auto px-5 pt-32 pb-24 text-neutral-700">
         <h1 className="text-3xl font-extrabold text-ink mb-2">Privacy Policy</h1>
         <p className="text-sm text-neutral-400 mb-10">Last updated {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>

@@ -20,7 +20,7 @@ export function Navbar() {
     ? [
         { href: '#services', label: 'Services' },
         { href: '#reviews', label: 'Reviews' },
-        { href: '#contact', label: 'Contact' },
+        { href: '#contact-form', label: 'Contact' },
       ]
     : [{ href: '/', label: 'Home' }]
 
@@ -81,7 +81,7 @@ export function StickyMobileCTA() {
         <Phone size={16} /> Call Now
       </a>
       <a
-        href="/#contact"
+        href="/#contact-form"
         className="flex-1 flex items-center justify-center gap-2 bg-white/10 border border-white/25 text-white font-semibold text-sm py-3 rounded-full"
       >
         Free Estimate
