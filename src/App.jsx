@@ -434,7 +434,7 @@ function Testimonials() {
             5.0 out of 5, 38 reviews on Yelp
           </div>
         </div>
-        <div className="max-w-2xl mx-auto bg-white border border-neutral-200 rounded-2xl p-8 -rotate-1">
+        <div className="max-w-2xl mx-auto bg-white border border-neutral-200 rounded-2xl p-8">
           <p className="text-neutral-600 text-lg leading-relaxed mb-4">
             &ldquo;Carlos and his team helped our family with various projects, from putting up
             laminate flooring to replacing a new vanity cabinet and bathroom sink. He is well
