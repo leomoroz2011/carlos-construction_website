@@ -14,8 +14,8 @@ export default function Privacy() {
             <h2 className="text-xl font-bold text-ink mb-2">Who this covers</h2>
             <p>
               This policy covers the website for Carlos Construction, operated by Construction
-              Special In Details, Inc., 240 Lake Merced Blvd, Daly City, CA 94015. It explains
-              what information we collect through this site and how we use it.
+              Special In Details, Inc., 888 Alta Loma Drive, South San Francisco, CA 94080. It
+              explains what information we collect through this site and how we use it.
             </p>
           </section>
 

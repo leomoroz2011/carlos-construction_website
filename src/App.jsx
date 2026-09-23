@@ -236,7 +236,7 @@ function Features() {
     },
     {
       title: '15+ Years on the Peninsula',
-      desc: 'Across Daly City, South San Francisco, Millbrae, and Pacifica, Carlos has been remodeling homes for over 15 years.',
+      desc: 'From Daly City and South San Francisco out to San Bruno, San Mateo, Millbrae, Brisbane, and Pacifica, Carlos has been remodeling Peninsula homes for over 15 years.',
       Visual: RouteVisual,
     },
   ]
@@ -531,8 +531,8 @@ function Contact() {
 
         <div className="rounded-2xl overflow-hidden border border-neutral-200">
           <iframe
-            title="Carlos Construction location, 240 Lake Merced Blvd, Daly City, CA"
-            src="https://www.google.com/maps?q=240+Lake+Merced+Blvd,+Daly+City,+CA+94015&output=embed"
+            title="Carlos Construction location, 888 Alta Loma Drive, South San Francisco, CA"
+            src="https://www.google.com/maps?q=888+Alta+Loma+Drive,+South+San+Francisco,+CA+94080&output=embed"
             className="w-full h-64 border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

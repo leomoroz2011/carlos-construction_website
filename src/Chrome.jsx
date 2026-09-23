@@ -109,10 +109,13 @@ export function Footer() {
               Facebook
             </a>
             <span className="flex items-center gap-2">
-              <MapPin size={16} /> 240 Lake Merced Blvd, Daly City, CA
+              <MapPin size={16} /> 888 Alta Loma Drive, South San Francisco, CA
             </span>
           </div>
         </div>
+        <p className="text-sm text-white/50 text-center md:text-left">
+          Also serving Daly City, Millbrae, Pacifica, San Francisco, San Bruno, San Mateo, and Brisbane.
+        </p>
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10 text-xs text-white/40">
           <p>&copy; {new Date().getFullYear()} Construction Special In Details, Inc. (dba Carlos Construction). All rights reserved.</p>
           <div className="flex gap-5">
